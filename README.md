@@ -10,7 +10,8 @@ N/A
 
 ## Credits
 
-N/A
+Badge images are created thru https://shields.io/badges
+The message in prompt to creat README.md were pulled from https://coding-boot-camp.github.io/full-stack/github/professional-readme-guide
 
 ## License
 
@@ -18,7 +19,8 @@ N/A
 
 ## Link to this application
 
-
+Link to this Repo:
+Link to deployed APP: n/a
 
 ## Screenshots
 
