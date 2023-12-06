@@ -123,6 +123,7 @@ ${data[0].credits}
 ## License
 
 ${renderLicenseLink(data[0].licenseChoice)}
+
 ${renderLicenseSection(data[0].licenseChoice,data[0].github)}
 
 ## Badges
@@ -146,6 +147,11 @@ ${data[0].howToContribute}
 github username: ${data[0].github}
 
 https://github.com/${data[0].github}
+
+## Contact Me
+
+${data[0].contantInformation}
+
 `;
 }
 
