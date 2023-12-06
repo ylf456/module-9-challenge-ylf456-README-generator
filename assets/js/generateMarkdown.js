@@ -2,26 +2,93 @@
 // If there is no license, return an empty string
 
 function renderLicenseBadge(license) {
-  if (license === "none") {return "";} else if (license === "MIT"){ return 
+  if (license === "none" || license === undefined) {return "n/a";} else if (license === "Apache License 2.0"){
+    return 'https://img.shields.io/badge/License-Apache_2.0-blue.svg';
 
-  }
+  } else if (license === "GNU GPL v3"){ return 'https://img.shields.io/badge/License-GPLv3-blue.svg';
+
+  } else if(license === "ISC License"){ return 'https://img.shields.io/badge/License-ISC-blue.svg'
+
+  } else if(license ==="MIT"){ return 'https://img.shields.io/badge/License-MIT-blue.svg'
+
+  };
+
+  };
   
   
-}
+
 
 // TODO: Create a function that returns the license link
 // If there is no license, return an empty string
 function renderLicenseLink(license) {
-  if (license === "none") {return ""; } else {}
+  if (license === "none") {return "";} else if (license === "Apache License 2.0"){ return 'https://choosealicense.com/licenses/apache-2.0/';
+
+  } else if (license === "GNU GPL v3"){ return 'https://choosealicense.com/licenses/gpl-3.0/';
+
+  } else if(license === "ISC License"){ return 'https://choosealicense.com/licenses/isc/';
+
+  } else if(license ==="MIT"){ return 'https://choosealicense.com/licenses/mit/';
+
+  };
 }
 
 // TODO: Create a function that returns the license section of README
 // If there is no license, return an empty string
-function renderLicenseSection(license) {
-  if (license === "none") {return "" } else {
+function renderLicenseSection(license,name) {
+  if (license === "none") {return "n/a";} else if (license === "Apache License 2.0"){ return `  Apache License
+  Version 2.0, January 2004
+http://www.apache.org/licenses/
 
+TERMS AND CONDITIONS FOR USE, REPRODUCTION, AND DISTRIBUTION`;
+  } else if (license === "GNU GPL v3"){ 
+    return `refer to the link above for more details of this license
+  GNU GENERAL PUBLIC LICENSE
+  Version 3, 29 June 2007
+
+Copyright (C) 2007 Free Software Foundation, Inc. <https://fsf.org/>
+Everyone is permitted to copy and distribute verbatim copies
+of this license document, but changing it is not allowed.`
+
+  } else if(license === "ISC License"){ return `ISC License
+
+  Copyright (c) [2023] [${name}]
+  
+  Permission to use, copy, modify, and/or distribute this software for any
+  purpose with or without fee is hereby granted, provided that the above
+  copyright notice and this permission notice appear in all copies.
+  
+  THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES WITH
+  REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF MERCHANTABILITY
+  AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR ANY SPECIAL, DIRECT,
+  INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES WHATSOEVER RESULTING FROM
+  LOSS OF USE, DATA OR PROFITS, WHETHER IN AN ACTION OF CONTRACT, NEGLIGENCE OR
+  OTHER TORTIOUS ACTION, ARISING OUT OF OR IN CONNECTION WITH THE USE OR
+  PERFORMANCE OF THIS SOFTWARE.`;
+
+  } else if(license ==="MIT"){ return `MIT License
+
+  Copyright (c) [2023] [${name}]
+  
+  Permission is hereby granted, free of charge, to any person obtaining a copy
+  of this software and associated documentation files (the "Software"), to deal
+  in the Software without restriction, including without limitation the rights
+  to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+  copies of the Software, and to permit persons to whom the Software is
+  furnished to do so, subject to the following conditions:
+  
+  The above copyright notice and this permission notice shall be included in all
+  copies or substantial portions of the Software.
+  
+  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+  SOFTWARE.`;
+  };
   }
-}
+
 
 // TODO: Create a function to generate markdown for README
 function generateMarkdown(data) {
@@ -38,7 +105,7 @@ ${data[0].description}
 - [Credits](#credits)
 - [License](#license)
 - [Github](#github)
-- [Features](#How to Contribute)
+- [Features](<#How to Contribute>)
 - [Tests](#tests)
   
 ## Installation
@@ -54,16 +121,14 @@ ${data[0].usage}
 ${data[0].credits}
 
 ## License
-  
-The last section of a high-quality README file is the license. This lets other developers know what they can and cannot do with your project. If you need help choosing a license, refer to [https://choosealicense.com/](https://choosealicense.com/).
----
-🏆 The previous sections are the bare minimum, and your project will ultimately determine the content of this document. You might also want to consider adding the following sections.
-  
+
+${renderLicenseLink(data[0].license)}
+${renderLicenseSection(data[0].license,data[0].github)}
+
 ## Badges
-  
-![badmath](https://img.shields.io/github/languages/top/nielsenjared/badmath)
-  Badges aren't necessary, but they demonstrate street cred. Badges let other developers know that you know what you're doing. Check out the badges hosted by [shields.io](https://shields.io/). You may not understand what they all represent now, but you will in time.
-  
+ 
+${renderLicenseBadge(data[0].license)}
+
 ## Features
 
 ${data[0].features}

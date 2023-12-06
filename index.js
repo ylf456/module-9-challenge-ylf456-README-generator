@@ -43,10 +43,11 @@ inquirer
         {
             type: 'lists',
             name: 'licenseChoice',
-            message: `License section. This lets other developers know what they can and cannot do with your project. If you need help choosing a license, refer to [https://choosealicense.com/](https://choosealicense.com/).
-      ---
-      🏆   After choose a license option other than none, a section containing license badge, a link to the license and test descrition of the license will be generated.`,
-            options: ["none","MIT","Apache License 2.0","GNU GPL","ISC License"]
+            message: `License section. 
+      🏆   After choose a license option other than none, a section containing license badge, a link to the license and test descrition of the license will be generated.
+      -------
+      This lets other developers know what they can and cannot do with your project. If you need help choosing a license, refer to [https://choosealicense.com/](https://choosealicense.com/).`,
+            options: ["none","Apache License 2.0","GNU GPL v3","ISC License","MIT"],
     },
 
         {
@@ -77,7 +78,7 @@ inquirer
     ])
     .then((answers) => {
         questions.push(answers);
-        writeToFile("README.md", questions)
+        writeToFile("generatedREADME.md", questions)
         //use data to call the function  
     })
 
@@ -94,7 +95,7 @@ function writeToFile(fileName, data) {
 }
 
 // TODO: Create a function to initialize app
-function init() { }
+function init() {}
 
 // Function call to initialize app
 init();
