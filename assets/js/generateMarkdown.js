@@ -21,7 +21,7 @@ function renderLicenseBadge(license) {
 // TODO: Create a function that returns the license link
 // If there is no license, return an empty string
 function renderLicenseLink(license) {
-  if (license === "none") {return "";} else if (license === "Apache License 2.0"){ return 'https://choosealicense.com/licenses/apache-2.0/';
+  if (license === "none" || license === undefined) {return "";} else if (license === "Apache License 2.0"){ return 'https://choosealicense.com/licenses/apache-2.0/';
 
   } else if (license === "GNU GPL v3"){ return 'https://choosealicense.com/licenses/gpl-3.0/';
 
@@ -35,7 +35,7 @@ function renderLicenseLink(license) {
 // TODO: Create a function that returns the license section of README
 // If there is no license, return an empty string
 function renderLicenseSection(license,name) {
-  if (license === "none") {return "n/a";} else if (license === "Apache License 2.0"){ return `  Apache License
+  if (license === "none" || license === undefined) {return "n/a";} else if (license === "Apache License 2.0"){ return `  Apache License
   Version 2.0, January 2004
 http://www.apache.org/licenses/
 
@@ -122,12 +122,12 @@ ${data[0].credits}
 
 ## License
 
-${renderLicenseLink(data[0].license)}
-${renderLicenseSection(data[0].license,data[0].github)}
+${renderLicenseLink(data[0].licenseChoice)}
+${renderLicenseSection(data[0].licenseChoice,data[0].github)}
 
 ## Badges
  
-${renderLicenseBadge(data[0].license)}
+![license badge](${renderLicenseBadge(data[0].licenseChoice)})
 
 ## Features
 
@@ -143,8 +143,9 @@ ${data[0].howToContribute}
 
 ## Github
 
-github username:${data[0].github}
-  https://github.com/${data[0].github}
+github username: ${data[0].github}
+
+https://github.com/${data[0].github}
 `;
 }
 
