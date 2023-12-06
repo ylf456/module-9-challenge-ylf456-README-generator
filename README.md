@@ -1,3 +1,25 @@
-# Professional README Generator Starter Code
+# README.MD generator
 
-[How to create a Professional README](https://coding-boot-camp.github.io/full-stack/github/professional-readme-guide)
+## Description
+
+TEXT
+
+## Installation
+
+N/A
+
+## Credits
+
+N/A
+
+## License
+
+N/A
+
+## Link to this application
+
+
+
+## Screenshots
+
+![Alt text](/relative/path/to/img.jpg?raw=true "Optional Title")
