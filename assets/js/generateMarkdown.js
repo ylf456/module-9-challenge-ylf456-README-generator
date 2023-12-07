@@ -148,7 +148,7 @@ ${data[0].howToContribute}
 
 github username: ${data[0].github}
 
-https://github.com/${data[0].github}
+Link to github profile: https://github.com/${data[0].github}
 
 ## Contact Me
 
