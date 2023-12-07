@@ -31,4 +31,4 @@ Link to deployed APP: n/a
 
 ## Screenshots
 
-![Alt text](/relative/path/to/img.jpg?raw=true "Optional Title")
+![This is a screenshot after entering prompts](./assets/image/screenshot.png)

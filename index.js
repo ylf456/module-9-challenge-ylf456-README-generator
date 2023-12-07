@@ -97,7 +97,6 @@ function writeToFile(fileName, data) {
     const README = MarkdownFunc(data);
     fs.writeFile(fileName, README, (err) =>
         err ? console.log(err) : console.log('Successfully created README.md!'));
-
 }
 }
 
