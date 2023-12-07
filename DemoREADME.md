@@ -2,7 +2,7 @@
 
 ## Description
 
-some description
+DEMO description
 
 ## Table of Contents 
   
@@ -10,28 +10,31 @@ some description
 - [Usage](#usage)
 - [Credits](#credits)
 - [License](#license)
-- [Github](#github)
-- [Features](<#How to Contribute>)
+- [Features](<#features>)
+- [How to Contribute](#how-to-contribute)
 - [Tests](#tests)
+- [Github](#github)
+- [Contact Me](#contact-me)
   
 ## Installation
   
-VScode, Javascript
+DEMO installation steps
   
 ## Usage
   
-![alternative text](assets/images/screenshot.png)
+ ![alt text](assets/images/screenshot.png)
   
 ## Credits
   
-n/a
+DEMO credits
 
 ## License
 
 https://choosealicense.com/licenses/mit/
+
 MIT License
 
-  Copyright (c) [2023] [ylf456]
+  Copyright (c) [2023] [username]
   
   Permission is hereby granted, free of charge, to any person obtaining a copy
   of this software and associated documentation files (the "Software"), to deal
@@ -57,17 +60,23 @@ MIT License
 
 ## Features
 
-n/a
+Demo features
 
 ## How to Contribute
   
-n/a
+Demo how to contribute
   
 ## Tests
   
-n/a
+Demo how to contribute
 
 ## Github
 
-github username:ylf456
-https://github.com/ylf456
+github username: username
+
+https://github.com/username
+
+## Contact Me
+
+DEMO email address
+
