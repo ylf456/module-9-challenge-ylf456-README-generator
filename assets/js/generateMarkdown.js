@@ -142,7 +142,7 @@ ${data[0].howToContribute}
   
 ## Tests
   
-${data[0].howToContribute}
+${data[0].tests}
 
 ## Github
 

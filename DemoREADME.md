@@ -68,7 +68,7 @@ Demo how to contribute
   
 ## Tests
   
-Demo how to contribute
+Demo tests
 
 ## Github
 
