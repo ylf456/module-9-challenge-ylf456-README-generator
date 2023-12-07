@@ -5,6 +5,7 @@ const fs = require("fs");
 // TODO: Create an array of questions for user input
 const questions = [];
 
+prompting = () => {
 inquirer
     .prompt([
         {
@@ -98,9 +99,10 @@ function writeToFile(fileName, data) {
         err ? console.log(err) : console.log('Successfully created README.md!'));
 
 }
+}
 
 // TODO: Create a function to initialize app
-function init() { }
+function init() { prompting()};
 
 // Function call to initialize app
 init();
